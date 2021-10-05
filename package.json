@@ -1,0 +1,38 @@
+{
+  "name": "fdoc-be-1-shubhrabiswal",
+  "version": "1.0.0",
+  "description": "- Create APIs to get all, get by id, add, update by id and delete by id a TODO list\r - Should use MongoDB as a database\r - API should not have any additional routes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exponentsoftware/fdoc-be-1-shubhrabiswal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exponentsoftware/fdoc-be-1-shubhrabiswal/issues"
+  },
+  "homepage": "https://github.com/exponentsoftware/fdoc-be-1-shubhrabiswal#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "exceljs": "^4.2.1",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.7",
+    "nodemon": "^2.0.12",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "razorpay": "^2.0.7",
+    "twilio": "^3.68.0",
+    "view": "^1.1.1"
+  }
+}

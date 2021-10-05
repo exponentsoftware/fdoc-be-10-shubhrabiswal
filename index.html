@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Todo Payment</title>
+</head>
+
+<body>
+
+    <h1> Payment </h1>
+
+    <span> Pay 100 Rupees <br><br>
+        <button id="pay-button">
+            Pay Now & Get Access
+        </button>
+    </span>
+    <hr />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+      var options = {
+        key: "rzp_test_aBMkDxy40iGqWx",
+        amount: "10000",
+        currency: "INR",
+        name: "Todo App",
+        description: "Pay & upgrade",
+        order_id: "order_I5hHzkOPmsSNCE",
+        handler: function (response) {
+          console.log(response);
+          alert("This step of Payment Succeeded");
+        },
+
+        theme: {
+          color: "#2300a3",
+        },
+      };
+      var razorpayObject = new Razorpay(options);
+      console.log(razorpayObject);
+      razorpayObject.on("payment.failed", function (response) {
+        console.log(respone);
+        alert("This step of Payment Failed");
+      });
+
+      document.getElementById("pay-button").onclick = function (e) {
+        razorpayObject.open();
+        e.preventDefault();
+      };
+    </script>
+
+</body>
+
+</html>
